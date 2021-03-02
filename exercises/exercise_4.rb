@@ -28,7 +28,6 @@ puts Store.count
 end
 
 # Do another fetch but this time load stores that carry women's apparel and are generating less than $1M in annual revenue.
-
 @womens_stores = Store.where(womens_apparel: true).where('annual_revenue < ?', 1000000)
 @womens_stores.each do |store|
   puts "Store name: #{store.name} Annual Revenue: #{store.annual_revenue}"
